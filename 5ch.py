@@ -21,8 +21,8 @@ boards = ["news4vip", "livejupiter", "newsplus", "poverty", ]
 
 while True:
     print("開始")
-    try:
-        for board in boards:
+    for board in boards:
+        try:
             print(board)
             ths = [Thread(th) for th in req(
                 f"https://itest.5ch.net/subbacks/{board}.json")["threads"]]
@@ -34,5 +34,7 @@ while True:
                 path = f"{dir}/{th.key}.json"
                 os.makedirs(dir, exist_ok=True)
                 open(path, 'w').write(data)
-    except:
-        print("エラー")
+        except KeyboardInterrupt:
+            exit(0)
+        except:
+            print("エラー")
