@@ -34,7 +34,5 @@ while True:
                 path = f"{dir}/{th.key}.json"
                 os.makedirs(dir, exist_ok=True)
                 open(path, 'w').write(data)
-        except KeyboardInterrupt:
-            exit(0)
-        except:
+        except Exception:
             print("エラー")
