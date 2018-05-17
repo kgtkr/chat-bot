@@ -17,7 +17,7 @@ def req(url):
 
 
 ua = "Mozilla/4.0"
-boards = ["news4vip", "livejupiter", "newsplus", "poverty", ]
+boards = ["news4vip", "livejupiter", "newsplus", "poverty", "famicom"]
 
 while True:
     print("開始")
