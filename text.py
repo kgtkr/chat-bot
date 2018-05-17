@@ -33,4 +33,4 @@ def text(html):
     lines = [x for x in lines if (len(
         [c for c in list(x) if unicodedata.category(c) in ["Lo", "Ll"]])/len(x)) > 0.7]
 
-    ("\n".join(lines), anks)
+    return ("\n".join(lines), anks)
