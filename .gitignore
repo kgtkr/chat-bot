@@ -1,4 +1,5 @@
 /dat
-/__pycache__
+__pycache__/
 *.txt
 *.model
+config.py
